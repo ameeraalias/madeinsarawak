@@ -1,0 +1,99 @@
+
+<html>
+
+
+    <head>
+    <title>Agropreneur Accelerator Platform</title>
+    <style>
+    html,body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    }
+    .video-container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%; 
+      overflow: hidden;
+    }
+    .video-container video {
+      /* Make video to at least 100% wide and tall */
+      min-width: 100%; 
+      min-height: 100%; 
+    
+      /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+      width: auto;
+      height: auto;
+    
+      /* Center the video */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    #play{
+      position:absolute;
+      top:39%;
+      margin-left:calc(50% - 150px);
+      z-index:100;
+      height:300px; 
+      opacity:0.5;
+    }
+    #mydiv{
+      display:none;
+      height:350px; 
+      z-index:100;
+      position:absolute;
+      width: 100%;
+      top: 20%;
+    text-align: center;
+      text-decoration:none;
+    }
+    .logo{
+    
+    }
+    .white, .white a{
+      color: white;
+      font-size: 32px;
+      text-decoration:none;
+      margin: 29px auto;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    </style>
+    <script>
+    
+    function play(){
+    var video = document.getElementById('video');
+    video.currentTime = 10;
+    video.play()
+    var playbtn = document.getElementById('play');
+    playbtn.style.display="none";
+    var mydiv= document.getElementById('mydiv');
+    mydiv.style.display="block"
+    
+    }
+    </script>
+    </head>
+    
+    
+    <body>
+    
+    <img onclick="play()" id="play" src="play.png">
+    
+    <div id="mydiv">
+    <a href="http://glanzd.com/presta/index.php"><img class="logo" src="sarawak_hornbill.png"></a>
+    <div class="white">Agropreneur Accelerator<br>Platform<br><br><br>
+    <a href="http://glanzd.com/presta/index.php?id_category=13&controller=category">Seeds</a> | <a href="http://glanzd.com/presta/index.php?id_category=15&controller=category">Fertilizers</a> | <a href="http://glanzd.com/presta/index.php?id_category=21&controller=category">Equipment and Machinery</a> | <a href="http://glanzd.com/presta/index.php?id_category=17&controller=category">Transportation</a> | <a href="http://glanzd.com/presta/index.php?id_category=16&controller=category">Manpower</a> | <a href="http://glanzd.com/presta/index.php?id_category=18&controller=category">Tours and Visits</a> | <a href="http://glanzd.com/presta/index.php?id_category=20&controller=category">Marketplace</a> | <a href="http://glanzd.com/presta/index.php?id_category=19&controller=category">Native Land</a> </div>
+    </div>
+    
+    <div class="video-container">
+      <video  id="video" autoplay="true" loop>
+        <source src="farm.mp4" type="video/mp4" />
+      </video>
+    </div>
+    
+    </body>
+    </html>
